@@ -1,18 +1,20 @@
 const argv = require('./config/yargs').argv;
 
-let comando = argv._[0];
+const todo = require('./to-do/to-do');
 
-switch (comando) {
-  case 'crear':
-    console.log('crear por hacer');
+let command = argv._[0];
+switch (command) {
+  case 'create':
+    let task = todo.create(argv.description);
+    console.log(task);
     break;
-  case 'listar':
-    console.log('Mostrar todas las tareas por hacer');
+  case 'list':
+    console.log('Showing all to dos');
     break;
-  case 'actualizar':
-    console.log('Actualiza una tarea por hacer');
+  case 'update':
+    console.log('update a todo');
     break;
   default:
-    console.log('Comando no reconocido');
+    console.log('Error! the command you are using is not recognized!');
     break;
 }

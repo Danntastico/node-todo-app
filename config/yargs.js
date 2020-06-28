@@ -1,21 +1,21 @@
 const argv = require('yargs')
-  .command('crear', 'Crear un elemento por hacer', {
-    descripcion: {
+  .command('create', 'Creates a todo', {
+    description: {
       demand: true,
       alias: 'd',
-      desc: 'Descripcion de la tarea por hacer',
+      desc: 'task`s description',
     },
   })
-  .command('actualizar', 'actualiza el estado compleatod de una tarea', {
-    descripcion: {
+  .command('update', 'Updates a todo to done!', {
+    description: {
       demmand: true,
       alias: 'd',
-      desc: 'Descripcion de la tarea porhacer',
+      desc: 'task`s description',
     },
-    completado: {
+    completed: {
       default: true,
       alias: 'c',
-      desc: 'Marca como completado o pendiente la tarea',
+      desc: 'Mark a task as completed or pending',
     },
   })
   .help().argv;
