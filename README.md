@@ -18,3 +18,7 @@ Just clone this repo and run the command
 1. First, create the `config` file where I put the different configurations to the commands that I need to create.
 
 2. create a main file where I call my config yargs file and start to proove with the commands that I'm Running
+
+3. I've created a `to-do.js` file, where we can put the logic to create tasks
+
+4. On a JSON file called `data.json` we save the data
