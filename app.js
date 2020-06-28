@@ -1,5 +1,5 @@
 const argv = require('./config/yargs').argv;
-
+const colors = require('colors');
 const todo = require('./to-do/to-do');
 
 let command = argv._[0];
@@ -9,10 +9,19 @@ switch (command) {
     console.log(task);
     break;
   case 'list':
-    console.log('Showing all to dos');
+    let list = todo.getList();
+    console.group('List of tasks');
+    for (const item of list) {
+      console.log('=====TODO====='.green);
+      console.log(item.description);
+      console.log(item.completed);
+      console.log('=============='.green);
+    }
+    console.groupEnd();
     break;
   case 'update':
-    console.log('update a todo');
+    let updated = todo.updateList(argv.description, argv.completed);
+    console.log(updated);
     break;
   default:
     console.log('Error! the command you are using is not recognized!');
