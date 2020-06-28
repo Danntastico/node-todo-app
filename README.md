@@ -14,3 +14,5 @@ Just clone this repo and run the command
 ```
 
 ## Process!
+
+1. First, create the `config` file where I put the different configurations to the commands that I need to create.
