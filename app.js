@@ -23,6 +23,10 @@ switch (command) {
     let updated = todo.updateList(argv.description, argv.completed);
     console.log(updated);
     break;
+  case 'delete':
+    let deleted = todo.deleteItem(argv.description);
+    console.log(deleted);
+    break;
   default:
     console.log('Error! the command you are using is not recognized!');
     break;
